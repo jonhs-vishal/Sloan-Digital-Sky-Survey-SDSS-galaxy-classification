@@ -81,4 +81,4 @@ and leaf nodes representing final outcomes or predictions.
 
 Each internal node corresponds to a test on an attribute, each branch corresponds to the result of the test, and each leaf node corresponds to a class label or a continuous value.
 
-5.**Model evalution**
+5.**Model Evalution**
