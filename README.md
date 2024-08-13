@@ -1,7 +1,9 @@
 **Sloan-Digital-Sky-Survey-SDSS-galaxy-classification**
 
 1.**Data**
+
 Context
+
 Sloan Digital Sky Survey current DR16 Server Data release with Galaxies, Stars and Quasars.
 
 License: Creative Commons Attribution license (CC-BY) More datailes here. Find more here.
@@ -54,3 +56,7 @@ plate = plate number
 mjd = MJD of observation
 
 fiberid = fiberID
+
+2**EDA**
+
+Handling outliers using quantile method with capping
