@@ -1,4 +1,4 @@
-#Sloan-Digital-Sky-Survey-SDSS-galaxy-classification
+**Sloan-Digital-Sky-Survey-SDSS-galaxy-classification**
 
 ##Data
 Context
@@ -50,5 +50,7 @@ class = object class (galaxy, star or quasar object)
 redshift = Final Redshift
 
 plate = plate number
+
 mjd = MJD of observation
+
 fiberid = fiberID
