@@ -1,6 +1,6 @@
 #Sloan-Digital-Sky-Survey-SDSS-galaxy-classification
 
-#Data
+##Data
 Context
 Sloan Digital Sky Survey current DR16 Server Data release with Galaxies, Stars and Quasars.
 
