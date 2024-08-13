@@ -1,1 +1,3 @@
-# Sloan-Digital-Sky-Survey-SDSS-galaxy-classification
+#Sloan-Digital-Sky-Survey-SDSS-galaxy-classification
+
+##Data
