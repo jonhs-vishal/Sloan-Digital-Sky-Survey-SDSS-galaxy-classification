@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="star.ico">
+  <title>Sloan Digital Sky Survey Classification</title>
+  <style>
+    
+
+    *{
+          margin: 0px;
+          padding: 0px;
+         } 
+    body {
+      margin: 0px;
+      padding: 0px;
+      background-image: url("https://img.freepik.com/free-photo/photorealistic-galaxy-background_23-2151064387.jpg");
+      background-size: cover;
+      opacity: 0.7;
+    }
+
+    .navbar-brand {
+      display: block;
+      margin: auto;
+      color: #f04ada;
+      font-weight: bold;
+      font-family: "Helvetica";
+    }
+
+    .submit-button {
+      display: block;
+      margin: auto;
+    }
+
+    p {
+      text-align: center;
+    }
+
+    p:hover {
+      filter: brightness(150%);
+    }
+
+    .card {
+      display: block;
+      margin: auto;
+      text-align: center;
+    }
+
+    h5 {
+      font-weight: bold;
+      font-family: "Helvetica", sans;
+      color: #0a0e73;
+      font-size: 1.8rem;
+    }
+
+    h1 {
+      color: #6b0969;
+      font-family: 'Georgia', serif;
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    .first_row {
+      margin-top: 5rem;
+    }
+
+    .last_row {
+      margin-bottom: 2rem;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card {
+      margin: 0 auto;
+      float: none;
+      margin-bottom: 10px;
+      background-color: #56f0ce;
+      border: 2px solid #0ac704;
+      border-width: 0.5rem;
+      border-size: 6rem;
+    }
+
+    .copyright {
+      color: #f01ad3;
+      font-size: 1.5rem;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .predict-dec {
+      text-align: center;
+      font-weight: bold;
+      color: #943f06;
+      font-size: 2rem;
+      font-family: 'Helvetica', sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-light bg-light">
+    <span class="navbar-brand mb-0 h1">
+      <h1>Galaxy Classification</h1>
+    </span>
+  </nav>
+  <div class="container">
+    <form action="/predict" method="post">
+      <div class="row first_row">
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Right Ascension angle :</h5>
+              <input type="text" name="ra" id="ra" required="required">
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Declination angle :</h5>
+              <input type="text" name="dec" id="dec" required="required">
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Ultraviolet filter in the photometric system:</h5>
+              <input type="text" name="u" id="u" required="required">
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Green filter in the photometric system:</h5>
+              <input type="text"  name="g" id="g" required="required">
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Red filter in the photometric system:</h5>
+              <input type="text" name="r" id="r" required="required">
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">InfraRed filter in the photometric system:</h5>
+              <input type="text"  name="i" id="i" required="required">
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">further InfraRed filter in the photometric system:</h5>
+              <input type="text"  name="z" id="z" required="required">
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Run number used to identify the specific scan:</h5>
+              <input type="text"  name="run" id="run" required="required">
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Camera column to identify the scanline within the run:</h5>
+              <input type="text"  name="camcol" id="camcol" required="required">
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Field number to identify each field:</h5>
+              <input type="text"  name="field" id="field" required="required">
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Spectroscopic object identifier:</h5>
+              <input type="text"  name="specobjid" id="specobjid" required="required">
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">The redshift of the object indicate its velocity and distance:</h5>
+              <input type="text"  name="redshift" id="redshift" required="required">
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Plate ID which identifies each plate in Sloan Digital Sky Survey(SDSS):</h5>
+              <input type="text"  name="plate" id="plate" required="required">
+            </div>
+          </div>
+        </div>
+        
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Modified Julian Age that is used to indicate when a given piece of Sloan Digital
+                  Sky Survey(SDSS) data was taken:</h5>
+                <input type="text" name="mjd" id="mjd" required="required">
+              </div>
+            </div>
+          </div>
+          </div>
+       
+        <br>
+
+        <div class="row last_row">
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Fiber ID that identifies the fiber that pointed the light at the focal plane in
+                each observation:</h5>
+              <input type="text"  name="fiberid" id="fiberid" required="required">
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+      <br>
+     <br>
+      <!-- Submit -->
+      <input type="submit" value="Submit" class="btn btn-danger submit-button">
+    </form>
+    <br>
+    <h3 class="predict-dec">{{ prediction_text }}</h3>
+    <br>
+
+  </div>
+
+</body>
+
+</html>
