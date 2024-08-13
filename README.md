@@ -57,6 +57,19 @@ mjd = MJD of observation
 
 fiberid = fiberID
 
-2**EDA**
+2.**EDA**
 
-Handling outliers using quantile method with capping
+There is no null values in data.
+
+There is no duplicated data.
+
+Handling outliers using quantile method with capping.
+
+3.**Feature selection**
+
+Extratreeclassifier is used for feature importance.
+
+There are zero importance of objid and rerun 
+so we drop objid and rerun.
+
+
