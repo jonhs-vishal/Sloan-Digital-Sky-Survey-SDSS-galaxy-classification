@@ -1,5 +1,13 @@
 # Sloan Digital Sky Survey (SDSS) Project
 
+## Table of contents
+-[Project Introduction]
+-[Data Desecription]
+-[EDA]
+-[Model Buliding]
+-[Model Evalution]
+-[conclusion]
+
 Project Introduction
 The Sloan Digital Sky Survey (SDSS) is one of the most ambitious and comprehensive astronomical surveys ever undertaken. It aims to map a significant portion of the night sky, cataloging celestial objects such as stars, galaxies, and quasars. The data gathered through this project provides essential insights into the large-scale structure of the universe and the evolution of galaxies.
 
