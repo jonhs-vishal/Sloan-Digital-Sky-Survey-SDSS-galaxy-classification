@@ -1,5 +1,4 @@
-![sky survey](https://github.com/user-attachments/assets/7156b70a-04c4-48a5-8145-ff4df32489c1)
-
+![galaxy](https://github.com/user-attachments/assets/264641a4-ff51-42f0-a10a-72cb6416d27c)
 # Sloan Digital Sky Survey (SDSS) Project
 
 ## Table of contents
