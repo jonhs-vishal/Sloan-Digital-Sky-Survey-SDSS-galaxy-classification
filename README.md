@@ -1,4 +1,4 @@
-Table Of Contents
+***Table of content***
 Project Introduction
 Dataset Description
 EDA
